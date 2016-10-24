@@ -1,7 +1,9 @@
 {
   "SingleProjectMode": 0,
   "SingleProjectMruCount": 5,
-  "MRU": [],
+  "MRU": [
+    "Special_Function_Console_Test"
+  ],
   "MultiProjectConfigurations": {},
   "ActivateCommandLineArguments": false,
   "Version": 2

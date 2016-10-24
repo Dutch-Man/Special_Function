@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{94A9FBF1-C6D8-4E40-8D4F-ABB2DBBC4199}</ProjectGuid>
+    <ProjectGuid>{77985B54-7180-425C-97DA-8A0C4D9A9545}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Special_Function_Console_Test</RootNamespace>
   </PropertyGroup>
@@ -41,11 +41,11 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>../../../;$(IncludePath)</IncludePath>
+    <IncludePath>./../../../;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>../../../;$(IncludePath)</IncludePath>
+    <IncludePath>./../../../;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -80,11 +80,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\DM_Console_Function.cpp" />
+    <ClCompile Include="..\..\..\DM_Common_C++.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\DM_Console_Function.h" />
+    <ClInclude Include="..\..\..\DM_Common_C++.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

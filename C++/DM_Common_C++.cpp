@@ -1,7 +1,8 @@
-#include "DM_Console_Function.h"
+#include "DM_Common_C++.h"
 
+//Function 1
 //获取本机IP，需要系统对应的msvcr120.dll
-string GetLocalIP()
+string DM_Common_Space::DM_Common::GetLocalIP()
 {
 	std::string IP_string = "";
 	WSADATA wsaData;
