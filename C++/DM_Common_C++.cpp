@@ -21,3 +21,9 @@ string DM_Common_Space::DM_Common::GetLocalIP()
 	}
 	return IP_string;
 }
+
+//string大小写转换,flag=true标示字符串转大写，flag=false表示字符串转小写，默认转大写
+void DM_Common_Space::DM_Common::str_trans(string &src, bool flag)
+{
+	transform(src.begin(), src.end(), src.begin(), flag ? toupper : tolower);
+}

@@ -2,7 +2,8 @@
 #define __COMMON_CPP_HEAD__
 
 #include <stdio.h>
-#include <iostream>
+#include <iostream> 
+#include <algorithm>
 using namespace std;
 
 #include <string>
@@ -20,6 +21,8 @@ namespace DM_Common_Space
 		//Function 1
 		//获取本机IP，需要系统对应的msvcr120.dll
 		static string GetLocalIP();
+		//string大小写转换,flag=true标示字符串转大写，flag=false表示字符串转小写，默认转大写
+		static void str_trans(string &src, bool flag = true);
 	};
 }
 
