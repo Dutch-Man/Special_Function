@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <string>
 #include<winsock2.h>
+#include <conio.h>
 #pragma comment(lib,"ws2_32.lib")
 using namespace std;
 
@@ -18,6 +19,8 @@ namespace DM_Console_Common_Space
 		static string GetLocalIP();
 		//string大小写转换,flag=true标示字符串转大写，flag=false表示字符串转小写，默认转大写
 		static void str_trans(string &src, bool flag = true);
+		//判断string是否由纯数字组成，需添加头文件 #include <conio.h>
+		static bool isNum(string s);
 	};
 }
 

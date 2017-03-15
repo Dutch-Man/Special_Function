@@ -27,3 +27,20 @@ void DM_Console_Common::str_trans(string &src, bool flag)
 {
 	transform(src.begin(), src.end(), src.begin(), flag ? toupper : tolower);
 }
+
+//判断string是否由纯数字组成
+bool DM_Console_Common::isNum(string s)
+{
+	if (s.length()==0)
+	{
+		return   false;
+	}
+	for (int i = 0; i<s.size(); i++)
+	{
+		if (((s.at(i)>'9') || (s.at(i)<'0')) && (s.at(i) != '.')&&(s.at(i)!='-'))
+		{
+			return   false;
+		}
+	}
+	return   true;
+}
