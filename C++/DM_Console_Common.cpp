@@ -44,3 +44,17 @@ bool DM_Console_Common::isNum(string s)
 	}
 	return   true;
 }
+
+//std::string转int，需添加头文件 #include <sstream>，转换失败返回-1
+int DM_Console_Common::string2int(string s)
+{
+	if (!(isNum(s)))
+	{
+		return -1;//字符串包含非数字字符
+	}
+	stringstream ss;
+	int n;
+	ss << s;//可以是其他数据类型
+	ss >> n; //string -> int
+	return n;
+}
