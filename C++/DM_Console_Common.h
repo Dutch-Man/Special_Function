@@ -1,21 +1,16 @@
-#ifndef __COMMON_CPP_HEAD__
-#define __COMMON_CPP_HEAD__
+#pragma once
 
 #include <stdio.h>
-#include <iostream> 
 #include <algorithm>
-using namespace std;
-
 #include <string>
 #include<winsock2.h>
-using namespace std;
 #pragma comment(lib,"ws2_32.lib")
+using namespace std;
 
-
-//使用时需包含命名空间DM_Common_Space
-namespace DM_Common_Space
+//使用时需包含命名空间DM_Console_Common_Space
+namespace DM_Console_Common_Space
 {
-	class DM_Common
+	class DM_Console_Common
 	{
 	public:
 		//Function 1
@@ -26,4 +21,3 @@ namespace DM_Common_Space
 	};
 }
 
-#endif//__COMMON_CPP_HEAD__
