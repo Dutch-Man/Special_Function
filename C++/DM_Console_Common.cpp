@@ -83,3 +83,31 @@ void DM_Console_Common::trim(string &s)
 	s.erase(0, s.find_first_not_of(" "));
 	s.erase(s.find_last_not_of(" ") + 1);
 }
+
+
+//以字符c为界分割字符串s分割,输出到返回向量中
+vector<string> DM_Console_Common::Split_string(string s, char c)
+{
+	vector<string> ret;
+	string s_tmp;
+	for (size_t i = 0; i < s.length(); i++)
+	{
+		if (s[i] == c)
+		{
+			if (s_tmp.length()>0)
+			{
+				ret.push_back(s_tmp);
+			}
+			s_tmp.clear();
+			continue;
+		}
+
+		s_tmp += s[i];
+
+	}
+	if (s_tmp.length()>0)
+	{
+		ret.push_back(s_tmp);
+	}
+	return ret;
+}

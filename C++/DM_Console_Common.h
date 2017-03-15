@@ -6,6 +6,7 @@
 #include<winsock2.h>
 #include <conio.h>
 #include <sstream>
+#include <vector>
 #pragma comment(lib,"ws2_32.lib")
 using namespace std;
 
@@ -28,6 +29,8 @@ namespace DM_Console_Common_Space
 		static float string2float(string s);
 		//去掉string前后的空格
 		static void trim(string &s);
+		//以字符c为界分割字符串s分割,输出到返回向量中
+		static vector<string> Split_string(string s, char c);
 	};
 }
 

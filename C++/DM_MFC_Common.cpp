@@ -14,3 +14,4 @@ CString DM_MFC_Common::string2CString(string CS)
 {
 	return (CString)CS.c_str();
 }
+
