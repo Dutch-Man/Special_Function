@@ -24,6 +24,8 @@ namespace DM_Console_Common_Space
 		static bool isNum(string s);
 		//std::string转int，需添加头文件 #include <sstream>，转换失败返回-1
 		static int string2int(string s);
+		//std::string转float，需添加头文件 #include <sstream>，转换失败返回-1
+		static float string2float(string s);
 	};
 }
 

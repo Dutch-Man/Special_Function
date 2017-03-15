@@ -58,3 +58,17 @@ int DM_Console_Common::string2int(string s)
 	ss >> n; //string -> int
 	return n;
 }
+
+//std::string转float，需添加头文件 #include <sstream>，转换失败返回-1
+float DM_Console_Common::string2float(string s)
+{
+	if (!(isNum(s)))
+	{
+		return -1;//字符串包含非数字字符
+	}
+	stringstream ss;
+	float n;
+	ss << s;//可以是其他数据类型
+	ss >> n; //string -> int
+	return n;
+}
