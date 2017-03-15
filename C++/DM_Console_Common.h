@@ -26,6 +26,8 @@ namespace DM_Console_Common_Space
 		static int string2int(string s);
 		//std::string转float，需添加头文件 #include <sstream>，转换失败返回-1
 		static float string2float(string s);
+		//去掉string前后的空格
+		static void trim(string &s);
 	};
 }
 

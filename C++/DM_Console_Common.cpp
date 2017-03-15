@@ -72,3 +72,14 @@ float DM_Console_Common::string2float(string s)
 	ss >> n; //string -> int
 	return n;
 }
+
+//去掉string前后的空格
+void DM_Console_Common::trim(string &s)
+{
+	if (s.empty())
+	{
+		return;
+	}
+	s.erase(0, s.find_first_not_of(" "));
+	s.erase(s.find_last_not_of(" ") + 1);
+}
