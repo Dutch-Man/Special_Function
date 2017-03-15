@@ -31,6 +31,10 @@ namespace DM_Console_Common_Space
 		static void trim(string &s);
 		//以字符c为界分割字符串s分割,输出到返回向量中
 		static vector<string> Split_string(string s, char c);
+		//显示系统时间
+		static void ShowTime();
+		//获取系统时间(string字符串形式)
+		static string GetTimeStr();
 	};
 }
 

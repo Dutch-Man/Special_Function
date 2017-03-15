@@ -111,3 +111,23 @@ vector<string> DM_Console_Common::Split_string(string s, char c)
 	}
 	return ret;
 }
+
+//显示系统时间
+void DM_Console_Common::ShowTime()
+{
+	SYSTEMTIME tm;
+	GetLocalTime(&tm);
+	printf("Time : %d:%d:%d.%d\n", tm.wHour, tm.wMinute, tm.wSecond, tm.wMilliseconds);
+}
+
+//获取系统时间(字符串形式)
+string DM_Console_Common::GetTimeStr()
+{
+	char time_char[100];
+	string time;
+	SYSTEMTIME tm;
+	GetLocalTime(&tm);
+	sprintf(time_char,"Time : %d:%d:%d.%d", tm.wHour, tm.wMinute, tm.wSecond, tm.wMilliseconds);
+	time = time_char;
+	return time;
+}
