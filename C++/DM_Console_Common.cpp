@@ -131,3 +131,67 @@ string DM_Console_Common::GetTimeStr()
 	time = time_char;
 	return time;
 }
+
+//RGBתCMYK
+void DM_Console_Common::RGB2CMYK(BYTE R,BYTE G,BYTE B,BYTE &C,BYTE &M,BYTE &Y,BYTE &K)
+{
+	double r, g, b;
+	r = (double) R;
+	g = (double) G;
+	b = (double) B;
+
+	r = 1.0 - (r / 255.0);
+	g = 1.0 - (g / 255.0);
+	b = 1.0 - (b / 255.0);
+
+	double c, m, y, k;
+	if (r < g)
+		k = r;
+	else
+		k = g;
+	if (b < k)
+		k = b;
+
+	c = (r - k)/(1.0 - k);
+	m = (g - k)/(1.0 - k);
+	y = (b - k)/(1.0 - k);
+
+	c = (c * 100) + 0.5;
+	m = (m * 100) + 0.5;
+	y = (y * 100) + 0.5;
+	k = (k * 100) + 0.5;
+
+	C = (BYTE) c;
+	M = (BYTE) m;
+	Y = (BYTE) y;
+	K = (BYTE) k;
+}
+
+//CMYKתRGB
+void DM_Console_Common::CMYK2RGB(BYTE C,BYTE M,BYTE Y,BYTE K,BYTE &R,BYTE &G,BYTE &B)
+{
+	double r, g, b;
+	double c, m, y, k;
+
+	c = (double) C;
+	m = (double) M;
+	y = (double) Y;
+	k = (double) K;
+
+	c = c / 255.0;
+	m = m / 255.0;
+	y = y / 255.0;
+	k = k / 255.0;
+
+	r = c * (1.0 - k) + k;
+	g = m * (1.0 - k) + k;
+	b = y * (1.0 - k) + k;
+
+	r = (1.0 - r) * 255.0 + 0.5;
+	g = (1.0 - g) * 255.0 + 0.5;
+	b = (1.0 - b) * 255.0 + 0.5;
+
+	R = (BYTE) r;
+	G = (BYTE) g;
+	B = (BYTE) b;
+}

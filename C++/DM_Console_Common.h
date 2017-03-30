@@ -35,6 +35,10 @@ namespace DM_Console_Common_Space
 		static void ShowTime();
 		//获取系统时间(string字符串形式)
 		static string GetTimeStr();
+		//RGB转CMYK
+		static void RGB2CMYK(BYTE R,BYTE G,BYTE B,BYTE &C,BYTE &M,BYTE &Y,BYTE &K);
+		//CMYK转RGB
+		static void CMYK2RGB(BYTE C,BYTE M,BYTE Y,BYTE K,BYTE &R,BYTE &G,BYTE &B);
 	};
 }
 
